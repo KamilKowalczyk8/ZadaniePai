@@ -1,0 +1,147 @@
+<html>
+ <head>
+ </head>
+ <body>
+ 
+   <div id="naglowek">
+       <center>
+       Imie<br>
+     <input type="text" id="imie" onkeyup="klik1()"><br><br>
+       Nazwisko<br>
+     <input type="text" id="nazwisko" onkeyup="klik2()"><br><br>
+       Kod pocztowy<br>
+    <input type="text" id="kod" onkeyup="klik3()"><br><br>
+       Miasto<br>
+    <input type="text" id="miasto" onkeyup="klik4()"><br><br>
+       Email<br>
+      <input type="text" id="email" onkeyup="klik5()"><br><br>
+       Telefon<br>
+      <input type="text" id="telefon" onkeyup="klik6()"><br><br>     
+   
+           </center>
+     </div>
+  
+ </body>
+    <script>
+        function klik1()
+        {
+        document.getElementById("naglowek").style.backgroundColor="red";
+            {
+            const string = document.getElementById("imie").value;
+           
+            const regex = /[A-Z]{1}[a-z]+/;
+        const match = regex.exec(string);
+            if (match)
+                {
+                    const name = match[1];
+                    
+                     document.getElementById("naglowek").style.backgroundColor="green";
+                }
+            else{
+               
+                document.getElementById("naglowek").style.backgroundColor="red";
+            }
+            }
+        }
+            function klik2()
+            
+            {
+            const string = document.getElementById("nazwisko").value;
+           
+            const regex = /[A-Z]{1}[a-z]+/;
+        const match = regex.exec(string);
+            if (match)
+                {
+                    const name = match[1];
+                    
+                 document.getElementById("naglowek").style.backgroundColor="green";
+                }
+            else{
+               document.getElementById("naglowek").style.backgroundColor="red";
+            }
+            }
+        
+        function klik3()
+            
+            {
+            const string = document.getElementById("kod").value;
+           
+            const regex = /[0-9]{2}-[0-9]{3}/;
+        const match = regex.exec(string);
+            if (match)
+                {
+                    const name = match[1];
+                  document.getElementById("naglowek").style.backgroundColor="green";
+                }
+            else{
+                document.getElementById("naglowek").style.backgroundColor="red";
+            }
+            }
+        
+            function klik4()
+            {
+            const string = document.getElementById("miasto").value;
+           
+            const regex = /[A-Z]{1}[a-z]+/;
+        const match = regex.exec(string);
+            if (match)
+                {
+                    const name = match[1];
+                   document.getElementById("naglowek").style.backgroundColor="green";
+                }
+            else{
+                document.getElementById("naglowek").style.backgroundColor="red";
+            }
+            }
+        
+        function klik5()
+            {
+            const string = document.getElementById("email").value;
+           
+            const regex = /[a-z]+@[a-z]+\.pl/;
+        const match = regex.exec(string);
+            if (match)
+                {
+                    const name = match[1];
+                   document.getElementById("naglowek").style.backgroundColor="green";
+                }
+            else{
+               document.getElementById("naglowek").style.backgroundColor="red";
+            }
+            }
+        function klik6()
+              {
+            const string = document.getElementById("telefon").value;
+           
+            const regex = /[0-9]{3}-[0-9]{3}-[0-9]{3}/;
+        const match = regex.exec(string);
+            if (match)
+                {
+                    const name = match[1];
+                   document.getElementById("naglowek").style.backgroundColor="green";
+                }
+            else{
+              document.getElementById("naglowek").style.backgroundColor="red";
+            }
+            }
+        
+        
+    </script>
+ <style>
+
+#naglowek{
+margin: 10px;
+width: 936px;
+height: 900px;
+border: 2px solid black;
+}
+     #wynik{
+margin: 10px;
+width: 300px;
+height: 300px;
+border: 2px solid black;
+     }
+
+
+ </style>
+</html>
