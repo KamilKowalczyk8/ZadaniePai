@@ -96,9 +96,10 @@
         
         function klik5()
             {
+                {
             const string = document.getElementById("email").value;
            
-            const regex = /[a-z]+@[a-z]+\.pl/;
+                const regex = /[a-z]+@[a-z]+\.pl/;
         const match = regex.exec(string);
             if (match)
                 {
@@ -108,6 +109,22 @@
             else{
                document.getElementById("naglowek").style.backgroundColor="red";
             }
+                }
+                {
+            const string = document.getElementById("email").value;
+           
+            const regex = /[a-z]+@[a-z]+\.[a-z]+\.pl/;
+                
+        const match = regex.exec(string);
+            if (match)
+                {
+                    const name = match[1];
+                   document.getElementById("naglowek").style.backgroundColor="green";
+                }
+            else{
+               document.getElementById("naglowek").style.backgroundColor="red";
+            }
+                }
             }
         function klik6()
               {
